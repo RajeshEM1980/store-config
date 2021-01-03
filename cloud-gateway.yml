@@ -42,3 +42,12 @@ resilience4j.circuitbreaker:
     backendA:
       baseConfig: default
       
+resilience4j.timelimiter:
+  time-limiter-aspect-order: 398
+  configs:
+    default:
+      timeoutDuration: 6s
+      cancelRunningFuture: false
+  instances:
+    backendA:
+      timeoutDuration: 6s
