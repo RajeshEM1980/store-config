@@ -29,11 +29,11 @@ resilience4j.circuitbreaker:
   configs:
     default:
       slidingWindowSize: 5
-      minimumNumberOfCalls: 3
+      minimumNumberOfCalls: 5
       permittedNumberOfCallsInHalfOpenState: 3
       automaticTransitionFromOpenToHalfOpenEnabled: true
-      waitDurationInOpenState: 10s
-      failureRateThreshold: 3
+      waitDurationInOpenState: 3s
+      failureRateThreshold: 5
       eventConsumerBufferSize: 10
       slowCallDurationThreshold: 200ms
       slowCallRateThreshold: 30
@@ -50,8 +50,8 @@ resilience4j.timelimiter:
   time-limiter-aspect-order: 398
   configs:
     default:
-      timeoutDuration: 5s
+      timeoutDuration: 3s
       cancelRunningFuture: false
   instances:
     backendA:
-      timeoutDuration: 5s
+      baseConfig: default
