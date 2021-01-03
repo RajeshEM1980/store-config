@@ -1,0 +1,19 @@
+server:
+  port: 9191
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: customer-service
+          uri: lb://customer-service
+          predicates:
+            - Path=/customer/**
+        - id: item-service
+          uri: lb://item-service
+          predicates:
+            - Path=/items/**
+        - id: order-service
+          uri: lb://order-service
+          predicates:
+            - Path=/order/**
