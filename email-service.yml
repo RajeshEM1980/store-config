@@ -1,3 +1,6 @@
+server:
+  port: 9798
+
 spring:
   mail:
     host: smtp.mailtrap.io
