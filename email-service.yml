@@ -7,3 +7,13 @@ spring:
     port: 2525
     username: ecebf1aecea90b
     password: 62d122ac336b25
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: ordertoemail
