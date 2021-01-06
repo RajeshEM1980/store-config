@@ -1,6 +1,13 @@
 spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: rabbitmq
+    password: rabbitmq
   cloud:
     stream:
       bindings:
-        output:
-          destination: order-email
+        orderToMailChannel:
+          destination: orderToMail
+    default:
+      contentType: application/json
