@@ -3,7 +3,6 @@ spring:
     host: localhost
     port: 5672
     username: user  
-    password: user
   cloud:
     stream:
       bindings:
