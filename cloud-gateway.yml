@@ -28,15 +28,7 @@ spring:
           predicates:
             - Path=/auth/**, /login
           filters:
-            - CircuitBreaker=backendA 
-      globalcors:
-        cors-configurations:
-          '[/**]':
-            allowedOrigins: "*"
-            allowedMethods:
-              - GET 
-              - POST 
-              - HEAD
+            - CircuitBreaker=backendA
 
 
 
