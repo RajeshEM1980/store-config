@@ -29,9 +29,6 @@ spring:
             - Path=/auth/**, /login
           filters:
             - CircuitBreaker=backendA
-            - AddResponseHeader=Access-Control-Allow-Origin, "*"
-            - AddResponseHeader=Access-Control-Allow-Methods, "*"
-            - AddResponseHeader=Access-Control-Allow-Headers, "*"
 
 
 
