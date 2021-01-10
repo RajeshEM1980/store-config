@@ -29,6 +29,7 @@ spring:
             - Path=/auth/**, /login
           filters:
             - CircuitBreaker=backendA
+            - AddResponseHeader=Access-Control-Allow-Origin, http://localhost:3000
 
 
 
