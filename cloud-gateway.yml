@@ -16,9 +16,9 @@ spring:
           uri: lb://item-service
           predicates:
             - Path=/items/**
-            - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
           filters:
             - CircuitBreaker=backendA
+            - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
         - id: order-service
           uri: lb://order-service
           predicates:
