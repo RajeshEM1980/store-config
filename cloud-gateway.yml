@@ -34,7 +34,9 @@ spring:
           '[/**]':
             allowedOrigins: "http://localhost:3000"
             allowedMethods:
-            - GET, -POST, -HEAD
+            - GET 
+            - POST 
+            - HEAD
 
 
 
