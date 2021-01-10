@@ -27,9 +27,14 @@ spring:
           uri: lb://auth-server
           predicates:
             - Path=/auth/**
-            - Path=/login
           filters:
             - CircuitBreaker=backendA 
+        - id: auth-server
+          uri: lb://auth-server
+          predicates:
+            - Path=/login
+          filters:
+            - CircuitBreaker=backendA
 
 
 
