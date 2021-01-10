@@ -11,28 +11,28 @@ spring:
             - Path=/customer/**
           filters:
             - CircuitBreaker=backendA
-            - AddResponseHeader=Access-Control-Allow-Origin, "*"
+            - AddResponseHeader=Access-Control-Allow-Origin, http://localhost:3000
         - id: item-service
           uri: lb://item-service
           predicates:
             - Path=/items/**
           filters:
             - CircuitBreaker=backendA
-            - AddResponseHeader=Access-Control-Allow-Origin, "*"
+            - AddResponseHeader=Access-Control-Allow-Origin, http://localhost:3000
         - id: order-service
           uri: lb://order-service
           predicates:
             - Path=/order/**
           filters:
             - CircuitBreaker=backendA
-            - AddResponseHeader=Access-Control-Allow-Origin, "*"
+            - AddResponseHeader=Access-Control-Allow-Origin, http://localhost:3000
         - id: auth-server
           uri: lb://auth-server
           predicates:
             - Path=/auth/**, /login
           filters:
             - CircuitBreaker=backendA
-            - AddResponseHeader=Access-Control-Allow-Origin, "*"
+            - AddResponseHeader=Access-Control-Allow-Origin, http://localhost:3000
 
 
 
