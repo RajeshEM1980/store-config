@@ -29,6 +29,11 @@ spring:
             - Path=/auth/**, /login
           filters:
             - CircuitBreaker=backendA 
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:3000"
+            allowedMethods: "*"
 
 
 
