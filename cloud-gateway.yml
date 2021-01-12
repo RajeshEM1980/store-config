@@ -29,6 +29,12 @@ spring:
             - Path=/auth/**, /login
           filters:
             - CircuitBreaker=backendA
+        - id: storage-service
+          uri: lb://storage-service
+          predicates:
+            - Path=/storage/**
+          filters:
+            - CircuitBreaker=backendA
 
 
 
