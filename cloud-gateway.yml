@@ -35,6 +35,12 @@ spring:
             - Path=/storage/**
           filters:
             - CircuitBreaker=backendA
+        - id: item-details-service
+          uri: lb://item-details-service
+          predicates:
+            - Path=/itemDetails/**
+          filters:
+            - CircuitBreaker=backendA
 
 
 
