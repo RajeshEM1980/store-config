@@ -15,5 +15,7 @@ spring:
   cloud:
     stream:
       bindings:
-        input:
+        orderinput:
           destination: ordertoemail
+        signininput:
+          destination: newsigninalert
