@@ -19,3 +19,5 @@ spring:
           destination: ordertoemail
         signininput:
           destination: newsigninalert
+        passwordresetinput:
+          destination: passwordresetmail
