@@ -14,7 +14,7 @@ spring:
           destination: itemsavedfilelocation
         output_file_deleted_location:
           destination: itemdeletedfilelocation
-   servlet:
-     multipart: 
-       max-file-size: 10MB
-       max-request-size: 10MB
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
