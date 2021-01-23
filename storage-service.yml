@@ -10,5 +10,7 @@ spring:
   cloud:
     stream:
       bindings:
-        output:
-          destination: itemfilelocation
+        output_file_created_location:
+          destination: itemsavedfilelocation
+        output_file_deleted_location:
+          destination: itemdeletedfilelocation
