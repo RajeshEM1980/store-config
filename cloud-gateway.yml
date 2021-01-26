@@ -57,7 +57,7 @@ resilience4j.circuitbreaker:
       waitDurationInOpenState: 3s
       failureRateThreshold: 5
       eventConsumerBufferSize: 10
-      slowCallDurationThreshold: 200ms
+      slowCallDurationThreshold: 4500ms
       slowCallRateThreshold: 30
       recordExceptions:
         - org.springframework.web.client.HttpServerErrorException
