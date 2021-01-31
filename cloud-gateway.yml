@@ -4,9 +4,6 @@ server:
 spring:
   cloud:
     gateway:
-      httpclient:
-        connect-timeout: 5000
-        response-timeout: 5000
       routes:
         - id: customer-service
           uri: lb://customer-service
@@ -50,14 +47,14 @@ spring:
 resilience4j.circuitbreaker:
   configs:
     default:
-      slidingWindowSize: 5
-      minimumNumberOfCalls: 5
-      permittedNumberOfCallsInHalfOpenState: 3
+      slidingWindowSize: 10
+      minimumNumberOfCalls: 10
+      permittedNumberOfCallsInHalfOpenState: 10
       automaticTransitionFromOpenToHalfOpenEnabled: true
       waitDurationInOpenState: 3s
       failureRateThreshold: 5
       eventConsumerBufferSize: 10
-      slowCallDurationThreshold: 4500ms
+      slowCallDurationThreshold: 9000ms
       slowCallRateThreshold: 30
       recordExceptions:
         - org.springframework.web.client.HttpServerErrorException
@@ -72,7 +69,7 @@ resilience4j.timelimiter:
   time-limiter-aspect-order: 398
   configs:
     default:
-      timeoutDuration: 5000
+      timeoutDuration: 10000
       cancelRunningFuture: false
   instances:
     backendA:
