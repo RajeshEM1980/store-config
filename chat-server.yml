@@ -3,12 +3,12 @@ server:
   
 spring:
   rabbitmq:
-    host: localhost
+    host: rabbitmq
     port: 5672
     username: guest
     password: guest
   data:
     mongodb:
-      host: localhost
+      host: mongodb
       port: 27017
       database: test
