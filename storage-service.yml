@@ -5,6 +5,7 @@ spring:
   rabbitmq:
     host: rabbitmq
     port: 5672
+    authentication-database: admin
     username: guest
     password: guest
   cloud:
