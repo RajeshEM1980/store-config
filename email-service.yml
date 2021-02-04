@@ -5,8 +5,8 @@ spring:
   mail:
     host: smtp.mailtrap.io
     port: 2525
-    username: ecebf1aecea90b
-    password: 62d122ac336b25
+    username: 3cb777c4460e88
+    password: 3d6dbc1f5f3548
   rabbitmq:
     host: rabbitmq
     port: 5672
