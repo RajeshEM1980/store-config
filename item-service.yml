@@ -5,6 +5,8 @@ spring:
     mongodb:
       host: mongodb
       port: 27017
+      username: root
+      password: root
       database: test
   datasource:
     url: jdbc:mysql://${MYSQL_HOST:mysqldb}:3306/itemservice #jdbc:mysql://${MYSQL_HOST:localhost}:3307/authserver
