@@ -5,6 +5,8 @@
       mongodb:
         host: mongodb
         port: 27017
+        username: guest
+        password: guest
         database: test
     datasource:
       url: jdbc:mysql://${MYSQL_HOST:mysqldb}:3306/authserver #jdbc:mysql://${MYSQL_HOST:localhost}:3307/authserver
