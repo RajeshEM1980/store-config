@@ -2,10 +2,6 @@ server:
   port: 7979
   
 spring:
-  rabbitmq:
-    host: rabbitmq
-    username: guest
-    password: guest
   data:
     mongodb:
       host: mongodb
@@ -14,3 +10,9 @@ spring:
       username: root
       password: root
       database: test
+
+broker:
+  host: rabbitmq
+  port: 61613
+  clientlogin: guest
+  clientpasscode: guest
