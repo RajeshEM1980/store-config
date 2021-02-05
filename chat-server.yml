@@ -4,7 +4,6 @@ server:
 spring:
   rabbitmq:
     host: rabbitmq
-    port: 61613
     username: guest
     password: guest
   data:
