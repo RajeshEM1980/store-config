@@ -41,6 +41,12 @@ spring:
             - Path=/itemDetails/**
           filters:
             - CircuitBreaker=backendA
+        - id: chat-server
+          uri: lb://chat-server
+          predicates:
+            - Path=/mywebsockets/**
+          filters:
+            - CircuitBreaker=backendA
 
 
 
