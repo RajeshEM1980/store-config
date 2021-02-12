@@ -4,8 +4,6 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://discUser:discPassword@discovery-server:8761/eureka/
-    instance:
-      preferIpAddress: true
 
 spring:
   zipkin:
