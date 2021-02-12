@@ -13,6 +13,10 @@ spring:
     host: redis
     port: 6379
   cloud:
+    kubernetes:
+      discovery:
+        all-namespaces: true
+        enabled: false
     loadbalancer:
       ribbon:
         enabled: true
