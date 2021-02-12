@@ -1,6 +1,7 @@
 eureka:
   client:
     register-with-eureka: true
+    prefer-ip-address: true
     fetch-registry: true
     service-url:
       defaultZone: http://discUser:discPassword@discovery-server:8761/eureka/
