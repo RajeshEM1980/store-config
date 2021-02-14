@@ -10,53 +10,17 @@ logging:
 
 spring:
   cloud:
+    kubernetes:
+      loadbalancer:
+        mode: SERVICE
     gateway:
+      default-filters:
+      - CircuitBreaker=backendA 
       discovery:
         locator:
           enabled: true
-      routes:
-        - id: customer-service
-          uri: lb://customer-service
-          predicates:
-            - Path=/customer/**
-          filters:
-            - CircuitBreaker=backendA
-        - id: item-service
-          uri: http://item-service:9001
-          predicates:
-            - Path=/items/**
-          filters:
-            - CircuitBreaker=backendA
-        - id: order-service
-          uri: lb://order-service
-          predicates:
-            - Path=/order/**
-          filters:
-            - CircuitBreaker=backendA
-        - id: auth-server
-          uri: lb://auth-server
-          predicates:
-            - Path=/auth/**, /login
-          filters:
-            - CircuitBreaker=backendA
-        - id: storage-service
-          uri: lb://storage-service
-          predicates:
-            - Path=/storage/**
-          filters:
-            - CircuitBreaker=backendA
-        - id: item-details-service
-          uri: lb://item-details-service
-          predicates:
-            - Path=/itemDetails/**
-          filters:
-            - CircuitBreaker=backendA
-        - id: chat-server
-          uri: lb://chat-server
-          predicates:
-            - Path=/mywebsockets/**
-          filters:
-            - CircuitBreaker=backendA
+          url-expression: "'http://'+serviceId+':'+getPort()"
+          lower-case-service-id: true
 
 
 
