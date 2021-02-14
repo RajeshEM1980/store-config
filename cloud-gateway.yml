@@ -10,9 +10,9 @@ logging:
 
 spring:
   cloud:
-    kubernetes:
-      loadbalancer:
-        mode: SERVICE
+#    kubernetes:
+#      loadbalancer:
+#        mode: SERVICE
     gateway:
       default-filters:
       - CircuitBreaker=backendA 
