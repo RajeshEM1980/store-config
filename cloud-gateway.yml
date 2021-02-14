@@ -19,7 +19,7 @@ spring:
       discovery:
         locator:
           enabled: true
-          url-expression: "'http://'+serviceId+':'+getPort()"
+          url-expression: "'http://'+serviceId"
           lower-case-service-id: true
 
 
