@@ -43,7 +43,7 @@ spring:
           predicates:
             - Path=/auth/**, /login
         - id: storage-service
-          uri: http://storage-service:5672
+          uri: http://storage-service:9696
           predicates:
             - Path=/storage/**
         - id: item-details-service
