@@ -1,5 +1,13 @@
 server:
   port: 9696
+  
+logging:
+  level:
+    root: debug
+    org:
+      springframework:
+        web: debug
+
 
 spring:
   rabbitmq:
