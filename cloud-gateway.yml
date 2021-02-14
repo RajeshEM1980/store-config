@@ -14,7 +14,7 @@ spring:
       loadbalancer:
         mode: SERVICE
       discovery:
-        filter: "metadata.labels['s1p']"
+        filter: "metadata.labels['app']"
     gateway:
       default-filters:
       - CircuitBreaker=backendA 
