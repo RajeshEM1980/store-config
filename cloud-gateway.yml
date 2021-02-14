@@ -25,47 +25,35 @@ spring:
           lower-case-service-id: true
       routes:
         - id: customer-service
-          uri: lb://customer-service
+          uri: http://customer-service:9000
           predicates:
             - Path=/customer/**
-          filters:
-            - CircuitBreaker=backendA
+         # filters:
+         #   - CircuitBreaker=backendA
         - id: item-service
           uri: http://item-service:9001
           predicates:
             - Path=/items/**
-          filters:
-            - CircuitBreaker=backendA
         - id: order-service
-          uri: lb://order-service
+          uri: http://order-service:9002
           predicates:
             - Path=/order/**
-          filters:
-            - CircuitBreaker=backendA
         - id: auth-server
-          uri: lb://auth-server
+          uri: http://auth-server:9898
           predicates:
             - Path=/auth/**, /login
-          filters:
-            - CircuitBreaker=backendA
         - id: storage-service
-          uri: lb://storage-service
+          uri: http://storage-service:5672
           predicates:
             - Path=/storage/**
-          filters:
-            - CircuitBreaker=backendA
         - id: item-details-service
-          uri: lb://item-details-service
+          uri: http://item-details-service:9393
           predicates:
             - Path=/itemDetails/**
-          filters:
-            - CircuitBreaker=backendA
         - id: chat-server
-          uri: lb://chat-server
+          uri: http://chat-server:7979
           predicates:
             - Path=/mywebsockets/**
-          filters:
-            - CircuitBreaker=backendA
 
 
 
