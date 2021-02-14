@@ -50,9 +50,6 @@ spring:
             - Path=/mywebsockets/**
           filters:
             - CircuitBreaker=backendA
-      discovery:
-        locator:
-          enabled: true
 
 
 
