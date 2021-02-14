@@ -13,6 +13,8 @@ spring:
     kubernetes:
       loadbalancer:
         mode: SERVICE
+      discovery:
+        filter: "metadata.labels['s1p']"
     gateway:
       default-filters:
       - CircuitBreaker=backendA 
