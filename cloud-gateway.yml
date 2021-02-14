@@ -15,7 +15,7 @@ spring:
           filters:
             - CircuitBreaker=backendA
         - id: item-service
-          uri: lb://item-service
+          uri: lb://item-service:9001
           predicates:
             - Path=/items/**
           filters:
