@@ -1,13 +1,6 @@
 server:
   port: 9191
  
-logging:
-  level:
-    root: debug
-    org:
-      springframework:
-        web: debug
-
 spring:
   cloud:
     kubernetes:
