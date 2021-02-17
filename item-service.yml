@@ -27,14 +27,15 @@ spring:
     password: guest
   cloud:
     stream:
+      bindings:
+        input_file_created:
+          destination: itemsavedfilelocation
+        input_file_deleted:
+          destination: itemdeletedfilelocation
     kubernetes:
       discovery:
         service-name: gateway
         primary-port-name: 9001
         enabled: true
         all-namespaces: true
-      bindings:
-        input_file_created:
-          destination: itemsavedfilelocation
-        input_file_deleted:
-          destination: itemdeletedfilelocation
+
