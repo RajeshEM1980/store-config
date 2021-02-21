@@ -32,6 +32,8 @@ spring:
           destination: itemsavedfilelocation
         input_file_deleted:
           destination: itemdeletedfilelocation
+        output_item_deleted_for_details:
+          destination: deleteitemdetails
     kubernetes:
       discovery:
         service-name: gateway
