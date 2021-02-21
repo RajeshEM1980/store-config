@@ -2,6 +2,11 @@ server:
   port: 9393
 
 spring:
+  rabbitmq:
+    host: rabbitmq
+    port: 5672
+    username: guest
+    password: guest
   data:
     mongodb:
       host: mongodb
@@ -10,3 +15,8 @@ spring:
       username: root
       password: root
       database: test
+  cloud:
+    stream:
+      bindings:
+        deleted_item_input:
+          destination: itemsavedfilelocation
