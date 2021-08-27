@@ -1,4 +1,11 @@
   server.port: 9898
+  
+  logging:
+  level:
+    root: debug
+    org:
+      springframework:
+        web: debug
 
   spring:
     data:
