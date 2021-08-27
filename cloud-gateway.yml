@@ -18,14 +18,13 @@ spring:
     gateway:
       default-filters:
       - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+      - CircuitBreaker=backendA
       globalcors:
         corsConfigurations:
           '[/**]':
             allowedOrigins: "*"
             allowedMethods: "*"
             allowedHeaders: "*"
-      default-filters:
-      - CircuitBreaker=backendA 
       discovery:
         locator:
           enabled: true
