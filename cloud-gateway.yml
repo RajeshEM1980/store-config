@@ -25,6 +25,7 @@ spring:
             allowedOrigins: "*"
             allowedMethods: "*"
             allowedHeaders: "*"
+            allowCredentials: true
       discovery:
         locator:
           enabled: true
