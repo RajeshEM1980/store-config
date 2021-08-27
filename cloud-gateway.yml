@@ -16,6 +16,11 @@ spring:
       discovery:
         filter: "metadata.labels['app']"
     gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
       default-filters:
       - CircuitBreaker=backendA 
       discovery:
