@@ -10,11 +10,6 @@ logging:
  
 spring:
   cloud:
-    kubernetes:
-      loadbalancer:
-        mode: SERVICE
-      discovery:
-        filter: "metadata.labels['app']"
     gateway:
       default-filters:
       - CircuitBreaker=backendA
