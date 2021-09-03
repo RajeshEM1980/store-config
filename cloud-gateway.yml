@@ -4,8 +4,11 @@ server:
     enabled: true
     key-alias: scg
     key-store-password: scg1234
-    key-store: classpath:scg-keystore.p12
-    key-store-type: PKCS12
+    key-store: classpath:scg-keystore.jks
+    key-store-type: JKS
+trust:
+  store: classpath:scg-keystore.jks
+    password: scg1234
   
 logging:
   level:
