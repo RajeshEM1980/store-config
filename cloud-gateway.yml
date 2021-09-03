@@ -2,7 +2,7 @@ server:
   port: 9191
   ssl:
     enabled: true
-    key-store: src/main/resources/bootsecurity.p12
+    key-store: classpath:bootsecurity.p12
     key-store-password: ananlar90
     keyStoreType: PKCS12
     keyAlias: bootsecurity
