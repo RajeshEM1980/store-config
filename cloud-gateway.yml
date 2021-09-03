@@ -2,10 +2,10 @@ server:
   port: 9191
   ssl:
     enabled: true
-    key-store: classpath:https-ex.jks
-    key-store-password: PASSWORD
-    keyStoreType: PKCS12
-    keyAlias: https-ex
+    key-alias: scg
+    key-store-password: scg1234
+    key-store: classpath:scg-keystore.p12
+    key-store-type: PKCS12
   
 logging:
   level:
