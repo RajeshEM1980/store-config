@@ -22,37 +22,37 @@ spring:
       discovery:
         locator:
           enabled: true
-          url-expression: "'https://'+serviceId+':'+getPort()"
+          url-expression: "'http://'+serviceId+':'+getPort()"
           lower-case-service-id: true
       routes:
         - id: customer-service
-          uri: https://customer-service:9000
+          uri: http://customer-service:9000
           predicates:
             - Path=/customer/**
          # filters:
          #   - CircuitBreaker=backendA
         - id: item-service
-          uri: https://item-service:9001
+          uri: http://item-service:9001
           predicates:
             - Path=/items/**
         - id: order-service
-          uri: https://order-service:9002
+          uri: http://order-service:9002
           predicates:
             - Path=/order/**
         - id: auth-server
-          uri: https://auth-server:9898
+          uri: http://auth-server:9898
           predicates:
             - Path=/auth/**, /login
         - id: storage-service
-          uri: https://storage-service:9696
+          uri: http://storage-service:9696
           predicates:
             - Path=/storage/**
         - id: item-details-service
-          uri: https://item-details-service:9393
+          uri: http://item-details-service:9393
           predicates:
             - Path=/itemDetails/**
         - id: chat-server
-          uri: https://chat-server:7979
+          uri: http://chat-server:7979
           predicates:
             - Path=/mywebsockets/**
 
