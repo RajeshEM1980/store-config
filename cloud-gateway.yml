@@ -1,11 +1,11 @@
 server:
   port: 9191
-  ssl:
-    enabled: true
-    key-alias: scg
-    key-store-password: scg1234
-    key-store: classpath:scg-keystore.jks
-    key-store-type: JKS
+  #ssl:
+    #enabled: true
+    #key-alias: scg
+    #key-store-password: scg1234
+    #key-store: classpath:scg-keystore.jks
+    #key-store-type: JKS
 #trust:
   #store: classpath:scg-keystore.jks
     #password: scg1234
