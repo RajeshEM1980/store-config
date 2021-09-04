@@ -6,9 +6,9 @@ server:
     key-store-password: scg1234
     key-store: classpath:scg-keystore.jks
     key-store-type: JKS
-trust:
-  store: classpath:scg-keystore.jks
-    password: scg1234
+#trust:
+  #store: classpath:scg-keystore.jks
+    #password: scg1234
   
 logging:
   level:
