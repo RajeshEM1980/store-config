@@ -37,7 +37,7 @@ spring:
         - id: item-service
           uri: http://item-service:9001
           predicates:
-            - Path=/items/**
+            - Path=/items/** , /storage/**
         - id: order-service
           uri: http://order-service:9002
           predicates:
@@ -46,10 +46,10 @@ spring:
           uri: http://auth-server:9898
           predicates:
             - Path=/auth/**, /login
-        - id: storage-service
-          uri: http://storage-service:9696
-          predicates:
-            - Path=/storage/**
+        #- id: storage-service
+        #  uri: http://storage-service:9696
+        #  predicates:
+        #    - Path=/storage/**
         - id: item-details-service
           uri: http://item-details-service:9393
           predicates:
