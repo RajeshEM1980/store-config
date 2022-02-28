@@ -1,10 +1,9 @@
 server:
   port: 9191
-security:
-  require-ssl: true
   ssl:
-    key-store: classpath:keystore.p12
-    key-store-password: Ogun2572
+    enabled: true
+    key-store: classpath:keystorenew.pkcs12
+    key-store-password: Ogn2572
     keyStoreType: pkcs12
     keyAlias: tomcat
   
