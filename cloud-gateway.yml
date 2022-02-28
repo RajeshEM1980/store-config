@@ -1,6 +1,7 @@
 server:
   port: 9191
   ssl:
+    enabled: true
     key-store: classpath:keystore.p12
     key-store-password: Ogun2572
     keyStoreType: pkcs12
