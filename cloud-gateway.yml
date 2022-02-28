@@ -9,7 +9,7 @@ server:
     key-store-type: PKCS12
 trust:
   store: classpath:keystore.p12
-    password: ogun
+    #password: ogun
   
 logging:
   level:
