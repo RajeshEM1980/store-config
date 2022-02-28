@@ -8,7 +8,6 @@ server:
     key-store-password: Ogun2572
     key-store-type: PKCS12
     key-alias: tomcat
-    key-password: Ogun2572
   
 logging:
   level:
