@@ -8,7 +8,7 @@ server:
     key-store: classpath:keystore.p12
     key-store-type: PKCS12
 trust:
-  store: classpath:scg-keystore.jks
+  store: classpath:keystore.p12
     password: ogun
   
 logging:
