@@ -18,7 +18,8 @@ spring:
     gateway:
       httpclient:
         ssl:
-          useInsecureTrustManager: true
+          trustedX509Certificates:
+          - cert_amplify.p7b
       default-filters:
       - CircuitBreaker=backendA
       discovery:
