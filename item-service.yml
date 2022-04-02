@@ -11,8 +11,8 @@ spring:
       database: test
   datasource:
     url: jdbc:mysql://${MYSQL_HOST:mysqldb}:3306/itemservice #jdbc:mysql://${MYSQL_HOST:localhost}:3307/authserver
-    username: ogn
-    password: ogn
+    username: root
+    password: pass
   jpa:
     hibernate:
       naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
