@@ -10,21 +10,21 @@ spring:
       password: root
       database: test
   datasource:
-    url: jdbc:mysql://${MYSQL_HOST:mysqldb}:3306/orderservice #jdbc:mysql://${MYSQL_HOST:localhost}:3307/authserver
-    username: root
-    password: pass
+    url: jdbc:postgresql://localhost:5432/orderservice #jdbc:mysql://${MYSQL_HOST:localhost}:3307/authserver
+    username: postgres
+    password: raje1409
   jpa:
     hibernate:
       naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
       ddl-auto: update
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.MySQL5Dialect
+        dialect: org.hibernate.dialect.PostgreSQLDialect
   rabbitmq:
     host: rabbitmq
     port: 5672
-    username: guest
-    password: guest
+    username: rajesh
+    password: rajesh
   cloud:
     stream:
       bindings:

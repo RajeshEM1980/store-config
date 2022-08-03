@@ -14,5 +14,5 @@ spring:
 broker:
   host: rabbitmq
   port: 61613
-  clientlogin: guest
-  clientpasscode: guest
+  clientlogin: rajesh
+  clientpasscode: rajesh
